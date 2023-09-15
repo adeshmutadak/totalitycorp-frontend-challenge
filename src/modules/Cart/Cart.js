@@ -35,7 +35,10 @@ const [total,setTotal] = useState(0)
         localStorage.setItem('cart',JSON.stringify(updateCart))
         navigate("/cart")
     } 
-
+   const checkout=()=>{
+    alert("Order Placed Successfully at your location")
+    navigate("/")
+   }
     const handelDec =(id) => {
         const updateCart=carts.map(item =>{
             if(item.id === id) {
@@ -130,10 +133,10 @@ const [total,setTotal] = useState(0)
         <button className="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white uppercase">Apply</button>
         <div className="border-t mt-8">
           <div className="flex font-semibold justify-between py-6 text-sm uppercase">
-            <span>Total cost</span>z
+            <span>Total cost</span>
             <span>${(total+10).toFixed(2)}</span>
           </div>
-          <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button>
+          <button  onClick={()=>{checkout()}} className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full" >Checkout</button>
         </div>
       </div>
 
