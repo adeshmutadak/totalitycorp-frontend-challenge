@@ -5,16 +5,14 @@ function Product() {
   const navigate=useNavigate();
     const {id}=useParams();
     const [product,setProduct]=useState({});
-    
     useEffect (()=>{
         const fetchProduct=async()=>{
      const response=await fetch(`https://fakestoreapi.com/products/${id}`);
-     const data= await response.json(); 
+     const data= await response.json();  
      setProduct(data);
         }
         fetchProduct();
-    } ,[])
-
+    } ,[id])
     if (!Object.keys(product).length === 0) return <div>Loading .....</div>;
     // Handling cart Event
     const handleCart= (product,redirect)=>{
