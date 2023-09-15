@@ -26,7 +26,7 @@ const Header = () => {
     <Link to={'/'} className="flex title-font font-medium cursor-pointer items-center text-gray-900 mb-4 md:mb-0">
       
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/2500px-Amazon_icon.svg.png" className='h-10 max-w-xs' alt="" />
-      <span className="ml-3 text-xl">Amezon</span>
+      <span className="ml-3 text-xl">Amazon</span>
     </Link>
     <nav className="md:ml-auto md:mr-auto  flex flex-wrap items-center text-base justify-center">
     {
