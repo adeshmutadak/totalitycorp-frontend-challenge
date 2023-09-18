@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const Product = ({products = []}) => {
   return (
     <div>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font mb-0">
   <div className="container px-5 py-24 mx-auto">
     <div className="flex flex-wrap -m-4">
     {
